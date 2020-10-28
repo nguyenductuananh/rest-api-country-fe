@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+body {
+    width: 100%;
+    margin-block-start: 0%;
+    margin : 0px 0px;
+    padding : 0px 0px;
+}
+.dark {
+    color : white;
+    background-color : black;
+}
+header {
+    margin: 0px auto;
+    height: 90px;
+    box-shadow: -5px 2px 10px rgb(211, 211, 211);
+    margin-bottom : 50px;
+}
+.page-header {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin: 0px auto;
+}
+header h3 {
+    font-family: 'Nunito Sans', sans-serif;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    font-size: 2rem;
+}
+
+.option {
+    text-transform: capitalize;
+    width: 90%;
+    height: 50px;
+    margin : 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.option .search {
+    height: 50px;
+}
+
+::placeholder {
+    font-family: "Nunito Sans";
+    font-size: 1rem;
+    opacity: 0.6;
+}
+.option .search img {
+    opacity: 0.6;
+}
+.option .search input{
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+.option .search {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding-left : 40px; 
+    width: 30%;
+    box-shadow: 0px 3px 7px rgb(197, 197, 197);
+}
+
+.option .region {
+    width: 15%;
+    position: relative;
+    box-shadow:  0px 3px 7px rgb(197, 197, 197);
+}
+
+.option .region .custom-select__trigger {
+    width: 80%;
+    border-radius: 5px;
+    height: 96%;
+    margin : 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.9rem;
+}
+
+.option .region .custom-select__trigger .arrow {
+    width: fit-content;
+    height: fit-content;
+    border-top: 6px solid black;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    /* border-bottom: 5px solid beige; */
+}
+.option .region .custom-options {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    top: 100%;
+    left: 0%;
+    padding-top: 10px;
+    border-radius: 5px;
+    box-shadow:  0px 3px 7px rgb(197, 197, 197);
+    background-color: white;
+    text-transform: capitalize;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.option .region .custom-options span{
+    height: 35px;
+    align-items: center;
+    width: 90%;
+    font-size: 0.9rem;
+    padding-left: 10%;
+}
+.option .region .custom-options span:hover {
+    width: 90%;
+    background-color: rgba(212, 212, 212, 0.411);
+}
+.list-countries{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    column-gap: 3%;
+    row-gap: 20px;
+}
+.country{
+    border-radius: 5px;
+    box-shadow: 0px 3px 4px rgb(201, 201, 201);
+}
+.country .flag{
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+.country .flag img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.country .info {
+    font-family: 'Nunito Sans', sans-serif;
+    width: 90%;
+    padding-left: 10%;
+    text-transform: capitalize;
+    margin-bottom: 15%;
+}
+.country .info p{
+    font-size: 0.95rem;
+    line-height: 10px;
+    font-weight: 100;
+    
+}
+.country .info .name {
+    font-size: 1.2rem;
+    color : black;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
