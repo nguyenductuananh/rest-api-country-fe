@@ -65,8 +65,8 @@
         }); 
         function getCountryElement(imgSrc, name, population, region, capital){
             return !isDarkmode
-            ?`<div class='country '><div class='flag'><img src='${imgSrc}' alt=''></div><div class='info'><p class='name'>${name}</p><p>population: <span>${population}</span></p><p>region : ${region}</p><p>Capital : ${capital}</p></div></div>`
-            :`<div class='country dark'><div class='flag'><img src='${imgSrc}' alt=''></div><div class='info'><p class='name'>${name}</p><p>population: <span>${population}</span></p><p>region : ${region}</p><p>Capital : ${capital}</p></div></div>`
+            ?`<div class='country '><div class='flag'><img src='${imgSrc}' alt=''></div><div class='info'><a href="./detail-nation-page.html?nation=${name}" class='name'>${name}</a><p>population: <span>${population}</span></p><p>region : ${region}</p><p>Capital : ${capital}</p></div></div>`
+            :`<div class='country dark'><div class='flag'><img src='${imgSrc}' alt=''></div><div class='info'><a href="./detail-nation-page.html?nation=${name} class='name'>${name}</a><p>population: <span>${population}</span></p><p>region : ${region}</p><p>Capital : ${capital}</p></div></div>`
             
         }
         function loadData(nations){

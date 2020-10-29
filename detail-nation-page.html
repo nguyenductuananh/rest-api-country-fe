@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-detail.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" crossorigin="anonymous"></script>
+    <script src="detail.js"></script>
+
+</head>
+<body>
+    <header class=" ">
+        <div class="page-header">
+            <h3>Where in the world?</h3>
+            <div class="dark-mode-btn">
+                <input type="checkbox" onchange="changeMode()" id="darkmode">
+                <label for="darkmode" name="radio"></label>
+            </div> 
+        </div>
+    </header>
+    <div class="content">
+        <div class="back-btn">
+            <a href="./">
+                Back
+            </a>
+        </div>
+        <div class="detail-nation">
+            <div class="flag">
+                <img src="" alt="">
+            </div>
+            <div class="detail">
+                <h1 class="name"></h1>
+                <div class="text-area">
+                    <div class="detail-left">
+                        <div class="line">
+                            <p>Native Name: </p>
+                            <span></span>
+                        </div>
+                        <div class="line">
+                            <p>Population :</p>
+                            <span></span>
+                        </div>
+                        <div class="line">
+                            <p>Region : </p>
+                            <span></span>
+                        </div>
+                        <div class="line">
+                            <p>Sub Region : </p>
+                            <span></span>
+                        </div>
+                        <div class="line">
+                            <p>Capital : </p>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="detail-right">
+                        <div class="line">
+                            <p>Top Level Domain : </p>
+                            <span></span>
+                        </div>
+                        <div class="line">
+                            <p>Currencies : </p>
+                            <span></span>
+                        </div>
+                        <div class="line">
+                            <p>Languages : </p>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-countries">
+                    <p>Border Countrires :</p>
+                    <div class="list-bors"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
