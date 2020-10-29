@@ -6,10 +6,6 @@ body {
     margin : 0px 0px;
     padding : 0px 0px;
 }
-.dark {
-    color : white;
-    background-color : black;
-}
 header {
     margin: 0px auto;
     height: 90px;
@@ -43,17 +39,19 @@ header h3 {
     height: 50px;
 }
 
-::placeholder {
+.searchInput::placeholder {
     font-family: "Nunito Sans";
     font-size: 1rem;
     opacity: 0.6;
 }
+
 .option .search img {
     opacity: 0.6;
 }
 .option .search input{
     border: none;
     outline: none;
+    background-color: transparent;
     font-size: 1.2rem;
     margin-left: 10px;
 }
@@ -160,4 +158,47 @@ header h3 {
     color : black;
     font-weight: 900;
     margin-bottom: 30px;
+}
+
+
+/* Dark mode*/
+body.dark {
+    background-color:  hsl(207, 26%, 17%);
+}
+header.dark {
+    background-color: hsl(209, 23%, 22%);
+    color : white;  
+    box-shadow: none;
+}
+.option .search.dark{
+    background-color: hsl(209, 23%, 22%);
+    box-shadow: none ;
+}
+.searchInput.dark::placeholder{
+    color : white;
+    opacity: 0.9;
+}
+.option .region.dark{
+    background-color: hsl(209, 23%, 22%);
+    color : white;
+    box-shadow: none;
+}
+
+.option .region .custom-options.dark {
+    background-color: h sl(209, 23%, 22%);
+    box-shadow: none;
+}
+
+.list-countries .country.dark{
+    color : white;
+    box-shadow: none ;
+    background-color: hsl(209, 23%, 22%);
+}
+
+.list-countries .country.dark p.name {
+    color : hsl(0, 0%, 100%);
+}
+
+.arrow.dark {
+    border-top: 5px solid white !important;
 }

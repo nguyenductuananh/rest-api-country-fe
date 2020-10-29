@@ -6,8 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
+<body class="dark">
+    <header class=" dark">
         <div class="page-header">
             <h3>Where in the world?</h3>
             
@@ -15,16 +15,16 @@
     </header>
     
     <div class="option">
-        <div class="search">
+        <div class="search dark">
             <img src="./images/loupe.svg" alt="" width="5%">
-            <input type="text" name="q" placeholder="Search for a country">
+            <input class="searchInput dark" type="text" name="q" placeholder="Search for a country">
         </div>
-        <div class="region">
+        <div class="region dark">
             <div class="custom-select__trigger">
                 <span class=current-selected>Africa</span>
-                <div class="arrow"></div>
+                <div class="arrow dark"></div>
             </div>
-            <div class="custom-options">
+            <div class="custom-options dark">
                 <span class="option" data-value = "africa">Africa</span>
                 <span class="option" data-value = "america">America</span>
                 <span class="option" data-value = "asia">Asia</span>
@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-    <div class="list-countries">
+    <div class="list-countries dark">
         <!-- <div class="country">
             <div class="flag">
                 <img src="https://restcountries.eu/data/vnm.svg" alt="">
@@ -61,7 +61,7 @@
             console.log(err);    
         }); 
         function getCountryElement(imgSrc, name, population, region, capital){
-            return `<div class='country'><div class='flag'><img src='${imgSrc}' alt=''></div><div class='info'><p class='name'>${name}</p><p>population: <span>${population}</span></p><p>region : ${region}</p><p>Capital : ${capital}</p></div></div>`
+            return `<div class='country dark'><div class='flag'><img src='${imgSrc}' alt=''></div><div class='info'><p class='name'>${name}</p><p>population: <span>${population}</span></p><p>region : ${region}</p><p>Capital : ${capital}</p></div></div>`
         }
         function loadData(nations){
             for(let nation of nations){
