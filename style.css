@@ -14,6 +14,7 @@ header {
 }
 .page-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 90%;
     height: 100%;
@@ -54,6 +55,7 @@ header h3 {
     background-color: transparent;
     font-size: 1.2rem;
     margin-left: 10px;
+    border-radius: 5px;
 }
 .option .search {
     border-radius: 4px;
@@ -67,6 +69,7 @@ header h3 {
 .option .region {
     width: 15%;
     position: relative;
+    border-radius: 5px;
     box-shadow:  0px 3px 7px rgb(197, 197, 197);
 }
 
@@ -76,6 +79,7 @@ header h3 {
     height: 96%;
     margin : 0px auto;
     display: flex;
+    border-radius: 5px;
     justify-content: space-between;
     align-items: center;
     font-family: 'Nunito Sans', sans-serif;
@@ -95,7 +99,7 @@ header h3 {
     position: absolute;
     width: 100%;
     height: fit-content;
-    top: 100%;
+    top: 104%;
     left: 0%;
     padding-top: 10px;
     border-radius: 5px;
@@ -160,6 +164,32 @@ header h3 {
     margin-bottom: 30px;
 }
 
+.dark-mode-btn input{
+    display: none;
+}
+
+.dark-mode-btn {
+    width: 45px;
+    height: 26px;
+    border-radius: 26px;
+    border: 1px solid black;
+    position: relative;
+}
+.dark-mode-btn label {
+    transition: 0.4s all;
+    content: "";
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top : 3px; 
+    left: 3px;
+    background-color : black;
+}
+input[type='checkbox']:checked ~ label{
+    transform: translateX(20px);
+    background-color: #03a9f4;
+}
 
 /* Dark mode*/
 body.dark {
@@ -174,6 +204,9 @@ header.dark {
     background-color: hsl(209, 23%, 22%);
     box-shadow: none ;
 }
+.searchInput.dark{
+    color : white;
+}
 .searchInput.dark::placeholder{
     color : white;
     opacity: 0.9;
@@ -185,7 +218,7 @@ header.dark {
 }
 
 .option .region .custom-options.dark {
-    background-color: h sl(209, 23%, 22%);
+    background-color: hsl(209, 23%, 22%);
     box-shadow: none;
 }
 
@@ -198,7 +231,10 @@ header.dark {
 .list-countries .country.dark p.name {
     color : hsl(0, 0%, 100%);
 }
-
+.dark-mode-btn.dark{
+    border: 1px solid #b2ebf2 !important;
+    background-color: rgb(139, 230, 230);
+}
 .arrow.dark {
     border-top: 5px solid white !important;
 }

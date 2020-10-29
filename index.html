@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body class="dark">
-    <header class=" dark">
+     <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+<body class="">
+    <header class=" ">
         <div class="page-header">
             <h3>Where in the world?</h3>
-            
+            <div class="dark-mode-btn">
+                <input type="checkbox" onchange="changeMode()" id="darkmode">
+                <label for="darkmode" name="radio"></label>
+            </div> 
         </div>
     </header>
     
     <div class="option">
-        <div class="search dark">
+        <div class="search ">
             <img src="./images/loupe.svg" alt="" width="5%">
-            <input class="searchInput dark" type="text" name="q" placeholder="Search for a country">
+            <input class="searchInput " type="text" name="q" placeholder="Search for a country">
         </div>
-        <div class="region dark">
+        <div class="region ">
             <div class="custom-select__trigger">
                 <span class=current-selected>Africa</span>
-                <div class="arrow dark"></div>
+                <div class="arrow "></div>
             </div>
-            <div class="custom-options dark">
+            <div class="custom-options ">
                 <span class="option" data-value = "africa">Africa</span>
                 <span class="option" data-value = "america">America</span>
                 <span class="option" data-value = "asia">Asia</span>
@@ -33,7 +36,7 @@
             </div>
         </div>
     </div>
-    <div class="list-countries dark">
+    <div class="list-countries ">
         <!-- <div class="country">
             <div class="flag">
                 <img src="https://restcountries.eu/data/vnm.svg" alt="">
@@ -61,7 +64,10 @@
             console.log(err);    
         }); 
         function getCountryElement(imgSrc, name, population, region, capital){
-            return `<div class='country dark'><div class='flag'><img src='${imgSrc}' alt=''></div><div class='info'><p class='name'>${name}</p><p>population: <span>${population}</span></p><p>region : ${region}</p><p>Capital : ${capital}</p></div></div>`
+            return !isDarkmode
+            ?`<div class='country '><div class='flag'><img src='${imgSrc}' alt=''></div><div class='info'><p class='name'>${name}</p><p>population: <span>${population}</span></p><p>region : ${region}</p><p>Capital : ${capital}</p></div></div>`
+            :`<div class='country dark'><div class='flag'><img src='${imgSrc}' alt=''></div><div class='info'><p class='name'>${name}</p><p>population: <span>${population}</span></p><p>region : ${region}</p><p>Capital : ${capital}</p></div></div>`
+            
         }
         function loadData(nations){
             for(let nation of nations){
