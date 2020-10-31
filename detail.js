@@ -32,4 +32,26 @@
         .catch(function(err){
             console.log(err);
         });
-})()
+})();
+let isDarkmode = false;
+function changeMode(){
+    if(!isDarkmode){
+        document.getElementsByTagName('body')[0].classList.add('dark');
+        document.getElementsByClassName('back-btn')[0].classList.add('dark');
+        document.getElementsByTagName('a')[0].classList.add('dark');
+        document.getElementsByTagName('header')[0].classList.add('dark');
+        for(let ct of document.getElementsByClassName('country')){
+            ct.classList.add('dark');
+        }   
+        isDarkmode = true;
+    } else {
+        document.getElementsByTagName('body')[0].classList.remove('dark');
+        document.getElementsByClassName('back-btn')[0].classList.remove('dark');
+        document.getElementsByTagName('a')[0].classList.remove('dark');
+        document.getElementsByTagName('header')[0].classList.remove('dark');
+        for(let ct of document.getElementsByClassName('country')){
+            ct.classList.remove('dark');
+        }   
+        isDarkmode = false;
+    }
+}

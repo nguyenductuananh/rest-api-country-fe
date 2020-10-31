@@ -127,6 +127,9 @@ header h3 {
     column-gap: 3%;
     row-gap: 20px;
 }
+.list-countries a {
+    text-decoration: none;
+}
 .country{
     border-radius: 5px;
     box-shadow: 0px 3px 4px rgb(201, 201, 201);
@@ -237,4 +240,50 @@ header.dark {
 }
 .arrow.dark {
     border-top: 5px solid white !important;
+}
+
+
+@media screen and (max-width : 375px){
+    body {
+        margin: 0px 0px ;
+        padding : 0px 0px;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        width: 100% !important;
+    }
+    .page-header {
+        width: 90%;
+    }
+    header h3{
+        font-size: 1rem;
+    }
+    .option {
+        width: 90%;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .option .search{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .option .region{
+        width: 90%;
+        height: 50px;
+    }
+    .option .region .custom-options span{
+       width: 100%;
+       align-items: flex-start;
+    }
+    .list-countries {
+        width: 90%;
+        display: block;
+    }
+    .list-countries .info a.dark{
+        color : white;
+
+    }
+    .country {
+        height: 350px;
+        margin-bottom: 30px;
+    }
 }

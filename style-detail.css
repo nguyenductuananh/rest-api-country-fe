@@ -35,19 +35,21 @@ header h3 {
 .content .back-btn {
     width: 100px;
     height: 22px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgb(167, 167, 167);
 }
 .content .back-btn a {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 0.8rem;
     font-weight: 300;
     width: 100%;
-    height: 100%;
+    height: 95%;
+
     text-decoration: none;
     text-align: center;
     display: block;
-    padding-top: 4%;
+    padding-top: 5%;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px rgb(167, 167, 167);
 }
 
 .content .detail-nation{
@@ -131,4 +133,87 @@ p{
     margin-top: 10px;
     box-shadow: 0px 0px 5px rgb(165, 165, 165);
 }
+.dark-mode-btn input{
+    display: none;
+}
 
+.dark-mode-btn {
+    width: 45px;
+    height: 26px;
+    border-radius: 26px;
+    border: 1px solid black;
+    position: relative;
+}
+.dark-mode-btn label {
+    transition: 0.4s all;
+    content: "";
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top : 3px; 
+    left: 3px;
+    background-color : black;
+}
+input[type='checkbox']:checked ~ label{
+    transform: translateX(20px);
+    background-color: #03a9f4;
+}
+/* Dark mode*/
+body.dark{
+    background-color: hsl(207, 26%, 17%);
+    color : white;
+}
+header.dark {
+    color : white;
+    box-shadow: none;
+    background-color: hsl(209, 23%, 22%);
+}
+.content .back-btn.dark{
+    box-shadow: none ;
+    background-color: hsl(209, 23%, 22%);
+}
+.content a.dark{
+    color : white;
+    /* box-shadow: none; */
+    background-color: hsl(209, 23%, 22%);
+}
+
+.country.dark {
+    box-shadow: none;
+    background-color: hsl(209, 23%, 22%);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 375px){
+    header h3 {
+        font-size: 1.1rem;
+    }
+
+    .content .detail-nation{
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .content .detail-nation .flag{
+        width: 100%;
+    }
+    .content .detail-nation .flag img {
+        width: 100%;
+    }
+
+    .content .detail-nation .detail{
+        width: 100%;
+    }
+    .content .detail-nation .detail .detail-left{
+        width: 100%;
+    }
+    .content .detail-nation .text-area{
+        flex-direction: column;
+        font-size: 0.8rem;
+    }
+}

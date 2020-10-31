@@ -29,6 +29,7 @@ function changeMode(){
         for(let nation of document.getElementsByClassName('country')) nation.classList.add('dark');
         document.getElementsByClassName('arrow')[0].classList.add('dark');
         document.getElementsByClassName('dark-mode-btn')[0].classList.add('dark');
+        for(let a of document.getElementsByTagName('a')) a.classList.add('dark');
         isDarkmode = true;
     } else {
         isDarkmode = false;
@@ -41,5 +42,6 @@ function changeMode(){
         for(let nation of document.getElementsByClassName('country')) nation.classList.remove('dark');
         document.getElementsByClassName('arrow')[0].classList.remove('dark');
         document.getElementsByClassName('dark-mode-btn')[0].classList.remove('dark');
+        for(let a of document.getElementsByTagName('a')) a.classList.remove('dark');
     }
 }
